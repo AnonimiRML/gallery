@@ -37,7 +37,12 @@ a {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
 }
 
 h1 {
@@ -203,16 +208,17 @@ transform: rotate(45deg) translate(-8px, -8px);
 
 
 .section__gallery {
+    
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
 }
 
 .gallery__box {
     
     background: linear-gradient(to bottom,rgba(0,0,0,0.7),rgba(0,0,0,1));
-    z-index: 100;
+    
     cursor: pointer;
     
     
@@ -228,16 +234,68 @@ transform: rotate(45deg) translate(-8px, -8px);
 
 
 .section__contact {
-    display: block;
+    position: relative;
+    
     height: 50vh;
     background: $primary;
 
 }
 
-.section__malling {
-    height: 50vh;
-    display: block;
+.contact__main {
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    grid-row-gap: 20px;
+    color: darken(white, 5%);
+    padding-top: 35px;
+
+    
+    a {
+        
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 50px;
+        padding: 10px;
+        
+        color: white;
+        transition: background-color 0.5s, color 0.5s;
+
+        &:hover {
+            background-color: white;
+            color: $primary;
+        }
+    }
 }
+
+.section__footer {
+
+    background-image: linear-gradient(180deg, rgba(0,0,0, 0.7), rgba(0,0,0, 0.4)), url("../img/background-footer.jpg");
+    background-repeat: no-repeat;
+    background-position: 50% 70%;
+    background-size: cover;
+    
+    height: 50vh;
+    
+}
+
+
+
+
+/* STICKY NAVBAR */
+
+.nav--sticky {
+    background-color: #353b48;
+    z-index: 1000;
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+
+/* END STICKY NAVBAR */
 
 
 

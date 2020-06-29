@@ -1,6 +1,6 @@
 const hamburger = document.querySelector('.nav__hamburger');
 const navMenu = document.querySelector('.nav__menu');
-const body = document.querySelector('body');
+const navbar = document.querySelector('.nav');
 
 const galleryImages = document.querySelectorAll('.gallery__box img');
 
@@ -18,5 +18,16 @@ galleryImages.forEach(image => {
     
 });
 
+const stickyNavbar = () => {
+    if (window.pageYOffset > "50") {
+        console.log("yes");
+        navbar.classList.add('nav--sticky');
+    }else {
+        console.log(window.pageYOffset);
+        navbar.classList.remove('nav--sticky');
+    }
+};
+
 
 hamburger.addEventListener('click', hamburgerToggle);
+window.addEventListener('scroll', stickyNavbar);
