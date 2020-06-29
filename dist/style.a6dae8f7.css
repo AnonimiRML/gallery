@@ -1908,6 +1908,13 @@ header {
   height: 50vh;
 }
 
+.footer__main input {
+  border: 1px solid white;
+  border-radius: 50px;
+  background: transparent;
+  padding: 5px;
+}
+
 /* STICKY NAVBAR */
 .nav--sticky {
   background-color: #353b48;
