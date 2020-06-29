@@ -1,0 +1,14 @@
+@charset "UTF-8";
+/* Extra small devices (phones, up to 480px) */
+@media screen and (max-width: 767px) {
+  header .main > .wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1000px;
+  }
+}
+
+/* Small devices (tablets, 768px and up) */
+/* tablets/desktops and up ———– */
+/* large desktops and up ———– */
+
+/*# sourceMappingURL=/responsive.2671e2dd.css.map */
